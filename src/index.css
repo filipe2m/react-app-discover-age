@@ -1,0 +1,147 @@
+:root {
+  --background-color: #efeff0;
+  --blue: #658fc2;
+  --green: #deecd7;
+  --grey: #dcdcdb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--blue);
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  padding: 0.8% 0.5% 0 2%;
+  background: var(--background-color);
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+}
+
+.column-left {
+  text-align: right;
+}
+
+.column-left p {
+  line-height: 40px;
+}
+
+.column-left p label {
+  font-weight: bold;
+}
+
+.column-left p label,
+.column-left p input {
+  display: inline-block;
+}
+
+.column-left p label {
+  width: 80px;
+  text-align: left;
+}
+
+input,
+select {
+  text-indent: 5px;
+  border: 2px solid var(--blue);
+  width: 200px;
+  height: 30px;
+}
+
+input::placeholder,
+select::placeholder {
+  color: var(--blue);
+}
+
+.btn {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border: 2px solid var(--blue);
+  width: 100px;
+  height: 30px;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.column-left p.info {
+  padding-left: 15px;
+  line-height: 30px;
+  margin: 20px 0 20px 0;
+  color: #000;
+  background: var(--green);
+  border-radius: 5px;
+  text-align: left;
+}
+
+.column-right {
+  grid-column: span 3;
+  min-height: 380px;
+}
+
+.column-right .table-container {
+  width: 95%;
+  height: 100%;
+  border: 2px solid var(--blue);
+}
+
+.column-right table {
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.column-right table tr {
+  line-height: 45px;
+  border-bottom: 2px solid var(--grey);
+}
+
+.column-right table tbody tr:last-child {
+  border: none;
+}
+
+.column-right table tr th,
+.column-right table tr td {
+  color: #000;
+  padding-left: 10px;
+}
+
+.column-right table tbody tr:hover td {
+  background: var(--blue);
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 10px;
+  margin-right: 3.2%;
+  vertical-align: middle;
+  text-align: right;
+}
+
+@media (max-width: 1262px) {
+  .column-left {
+    text-align: left;
+  }
+
+  .column-left {
+    padding-right: 5%;
+    grid-column: span 3;
+  }
+}
